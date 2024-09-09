@@ -101,7 +101,6 @@ CREATE TABLE Books (
 CREATE TABLE Sales (
     SaleId INT PRIMARY KEY AUTO_INCREMENT,
     BookId INT,
-    SaleDate DATE,
     Quantity INT,
     TotalAmount DECIMAL(10, 2),
     FOREIGN KEY (BookId) REFERENCES Books(BookId)
@@ -113,26 +112,20 @@ VALUES
 ('George', 'Orwell', 'United Kingdom'),
 ('J.K.', 'Rowling', 'United Kingdom'),
 ('Harper', 'Lee', 'United States'),
-('F. Scott', 'Fitzgerald', 'United States'),
-('Gabriel', 'Garcia Marquez', 'Colombia');
 
 -- Insert data into Books table
 INSERT INTO Books (Title, Genre, AuthorId, Price)
 VALUES 
-('1984', 'Dystopian', 1, 9.99),
-('Harry Potter and the Sorcerer\'s Stone', 'Fantasy', 2, 19.99),
-('To Kill a Mockingbird', 'Classic', 3, 14.99),
-('The Great Gatsby', 'Classic', 4, 12.99),
-('One Hundred Years of Solitude', 'Magical Realism', 5, 17.99);
+('1984', 'Dystopian', 1, 20),
+('Harry Potter and the Sorcerer\'s Stone', 'Fantasy', 2, 15),
+('To Kill a Mockingbird', 'Classic', 3, 10),
 
 -- Insert data into Sales table
 INSERT INTO Sales (BookId, Quantity, TotalAmount)
 VALUES 
-(1, 2, 19.98),
-(2, 1, 19.99),
-(3, 3, 44.97),
-(4, 1, 12.99),
-(5, 2, 35.98);
+(1, 2, 20),
+(2, 1, 15),
+(3, 3, 10),
 
 -- WRITE QUERIES TO GET THINGS 
 -- 1  
